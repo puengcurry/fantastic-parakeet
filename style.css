@@ -168,6 +168,14 @@ h2 {
 }
 body.dark-mode h2 { border-bottom-color: var(--border-color-dark); }
 
+h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+body.dark-mode h3 { color: var(--text-color-dark); }
+
 p {
     margin-bottom: 1rem;
 }

@@ -27,20 +27,39 @@
 
     <nav>
         <ul>
+            <li><a href="#about">About</a></li>
             <li><a href="#lotto">Lotto Generator</a></li>
+            <li><a href="#math-article">Lotto Article</a></li>
             <li><a href="#ai-identifier">AI Identifier</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#ai-article">AI Article</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li><a href="#comments">Comments</a></li>
         </ul>
     </nav>
 
     <main>
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About Fantastic Parakeet</h2>
+                <p>Welcome to Fantastic Parakeet, your new favorite corner of the internet! This website started as a simple project to explore web development and has grown into a collection of fun tools and informative articles. Our goal is to provide simple, useful, and engaging content for everyone.</p>
+                <p>From the chance-based fun of our Lotto Number Generator to the tech-savvy AI Cat/Dog Identifier, we're passionate about creating interactive experiences. We believe in learning by doing, and every tool on this site is a testament to that philosophy. We hope you enjoy using them as much as we enjoyed building them.</p>
+            </div>
+        </section>
+
         <section id="lotto" class="content-section">
             <div class="container">
                 <h2>Lotto Number Generator</h2>
                 <p>Feeling lucky? Our Lotto Number Generator is a simple tool to help you pick your numbers for the next big draw. It generates a set of random numbers with the click of a button. This is perfect for when you're not sure what numbers to choose and want to leave it up to fate. Good luck!</p>
                 <button id="generate">Generate Numbers</button>
                 <lotto-display></lotto-display>
+            </div>
+        </section>
+
+        <section id="math-article" class="content-section">
+            <div class="container">
+                <h3>The Mathematics of Chance: How Lotto Numbers Are Drawn</h3>
+                <p>Have you ever wondered about the odds of winning the lottery? It's a question rooted in the fascinating field of probability. When you use our generator, you're tapping into the concept of uniform random distribution. Each number in the lottery's range has an exactly equal chance of being selected for each slot. State lotteries use physical machines with numbered balls to ensure this randomness, making it impossible to predict the outcome.</p>
+                <p>The odds are calculated using combinations, a formula from probability theory. For example, to win a 6/49 lottery (picking 6 numbers from 49), there are 13,983,816 possible combinations. That's why winning is so rare! While our tool can't improve your odds, it ensures your number selection is as random as the drawing itself, freeing you from personal biases like using birthdays or anniversaries.</p>
             </div>
         </section>
 
@@ -65,6 +84,14 @@
                 <input type="file" id="image-upload" accept="image/*">
                 <div id="image-preview-container"></div>
                 <div id="label-container"></div>
+            </div>
+        </section>
+
+        <section id="ai-article" class="content-section">
+            <div class="container">
+                <h3>An Introduction to AI Image Recognition</h3>
+                <p>The Cat/Dog Identifier on our site is a simple example of a powerful technology called a Convolutional Neural Network (CNN), a type of AI model specifically designed for processing images. We built it using Google's Teachable Machine, a tool that makes this technology accessible to everyone.</p>
+                <p>How does it work? First, we 'trained' the model by showing it hundreds of pictures of cats and dogs, telling it which was which. The model learns to identify patterns—like the shape of ears, the texture of fur, and the structure of faces—associated with each animal. When you upload your image, the model analyzes it for these learned patterns and calculates a 'confidence score' (the percentage you see) for each category. It's a glimpse into the same technology used in everything from self-driving cars to medical imaging.</p>
             </div>
         </section>
 
