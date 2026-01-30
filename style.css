@@ -1,1 +1,65 @@
-/* Add styles here */
+
+/* General Body Styles & Background */
+body {
+    font-family: 'Poppins', sans-serif; /* Using a more modern font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1d; /* Dark, rich background */
+    background-image: linear-gradient(315deg, #1a1a1d 0%, #3a3a3d 74%),
+                      url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-blend-mode: multiply;
+    margin: 0;
+    color: #f0f2f5;
+}
+
+/* Main App Container - Lifted Card Effect */
+.container {
+    background: rgba(45, 45, 48, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 50px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                0 15px 12px rgba(0, 0, 0, 0.2),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Main Title */
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Generate Button - Modern & Interactive */
+#generate {
+    padding: 15px 30px;
+    font-size: 1.25em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 12px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #8e44ad, #3498db);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(142, 68, 173, 0.5),
+                0 0 40px rgba(52, 152, 219, 0.5);
+    transition: all 0.3s ease;
+}
+
+#generate:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(142, 68, 173, 0.7),
+                0 0 50px rgba(52, 152, 219, 0.7);
+}
+
+#generate:active {
+    transform: translateY(0);
+}
