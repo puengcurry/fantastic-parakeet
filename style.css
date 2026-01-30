@@ -1,3 +1,22 @@
+:root {
+    --bg-color-dark: #1a1a1d;
+    --bg-gradient-dark: #3a3a3d;
+    --container-bg-dark: rgba(45, 45, 48, 0.7);
+    --text-color-dark: #f0f2f5;
+    --h1-color-dark: #ffffff;
+    --card-shadow-dark-1: rgba(0, 0, 0, 0.4);
+    --card-shadow-dark-2: rgba(0, 0, 0, 0.2);
+    --card-border-dark: rgba(255, 255, 255, 0.1);
+
+    --bg-color-light: #f0f2f5;
+    --bg-gradient-light: #ffffff;
+    --container-bg-light: rgba(255, 255, 255, 0.7);
+    --text-color-light: #333333;
+    --h1-color-light: #000000;
+    --card-shadow-light-1: rgba(0, 0, 0, 0.1);
+    --card-shadow-light-2: rgba(0, 0, 0, 0.05);
+    --card-border-light: rgba(0, 0, 0, 0.1);
+}
 
 /* General Body Styles & Background */
 body {
@@ -6,25 +25,75 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #1a1a1d; /* Dark, rich background */
-    background-image: linear-gradient(315deg, #1a1a1d 0%, #3a3a3d 74%),
+    background-color: var(--bg-color-dark); /* Dark, rich background */
+    background-image: linear-gradient(315deg, var(--bg-color-dark) 0%, var(--bg-gradient-dark) 74%),
                       url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     background-blend-mode: multiply;
     margin: 0;
-    color: #f0f2f5;
+    color: var(--text-color-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    background-color: var(--bg-color-light);
+    background-image: linear-gradient(315deg, var(--bg-color-light) 0%, var(--bg-gradient-light) 74%);
+    color: var(--text-color-light);
+}
+
+/* Theme switcher styles */
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-toggle {
+    display: none;
+}
+
+#theme-toggle + label {
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.sun, .moon {
+    transition: opacity 0.3s ease;
+}
+
+#theme-toggle:checked + label .sun {
+    opacity: 0;
+}
+
+#theme-toggle:not(:checked) + label .moon {
+    opacity: 0;
+}
+
+#theme-toggle:checked + label .moon {
+    opacity: 1;
 }
 
 /* Main App Container - Lifted Card Effect */
 .container {
-    background: rgba(45, 45, 48, 0.7);
+    background: var(--container-bg-dark);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 40px 50px;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
-                0 15px 12px rgba(0, 0, 0, 0.2),
+    box-shadow: 0 20px 40px var(--card-shadow-dark-1),
+                0 15px 12px var(--card-shadow-dark-2),
                 inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--card-border-dark);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+body.light-mode .container {
+    background: var(--container-bg-light);
+    box-shadow: 0 20px 40px var(--card-shadow-light-1),
+                0 15px 12px var(--card-shadow-light-2),
+                inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--card-border-light);
 }
 
 /* Main Title */
@@ -32,9 +101,16 @@ h1 {
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 25px;
-    color: #ffffff;
+    color: var(--h1-color-dark);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: color 0.3s ease;
 }
+
+body.light-mode h1 {
+    color: var(--h1-color-light);
+    text-shadow: none;
+}
+
 
 /* Generate Button - Modern & Interactive */
 #generate {
