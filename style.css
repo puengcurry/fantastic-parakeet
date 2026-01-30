@@ -220,39 +220,34 @@ body.light-mode #teachable-machine-container h2 {
     text-shadow: none;
 }
 
-#teachable-machine-container button {
-    padding: 15px 30px;
-    font-size: 1.25em;
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom: 30px;
-    border: none;
-    border-radius: 12px;
-    color: #ffffff;
-    background: linear-gradient(45deg, #28a745, #218838); /* Greenish gradient for start button */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+#teachable-machine-container p {
+    margin-bottom: 25px;
 }
 
-#teachable-machine-container button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+#image-upload {
+    margin-bottom: 20px;
 }
 
-#teachable-machine-container button:active {
-    transform: translateY(0);
-}
-
-#webcam-container {
+#image-preview-container {
     margin: 20px auto;
-    border: 2px solid var(--card-border-dark);
+    width: 200px;
+    height: 200px;
+    border: 2px dashed var(--card-border-dark);
     border-radius: 10px;
-    overflow: hidden; /* Ensures the canvas corners are also rounded */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     transition: border-color 0.3s ease;
 }
 
-body.light-mode #webcam-container {
-    border: 2px solid var(--card-border-light);
+body.light-mode #image-preview-container {
+    border: 2px dashed var(--card-border-light);
+}
+
+#image-preview-container img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #label-container {
