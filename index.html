@@ -3,118 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Fantastic Parakeet - A Collection of Tools & Articles</title>
+    <meta name="description" content="A website featuring a collection of useful tools, including a Lotto Number Generator and an AI-powered Cat/Dog Identifier.">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791010009158789"
      crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-6791010009158789">
 </head>
 <body>
-    <div class="theme-switcher">
-        <input type="checkbox" id="theme-toggle">
-        <label for="theme-toggle">
-            <span class="sun">☀️</span>
-            <span class="moon">🌙</span>
-        </label>
-    </div>
+
+    <header>
+        <div class="header-container">
+            <h1 class="site-title">Fantastic Parakeet</h1>
+            <div class="theme-switcher">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#lotto">Lotto Generator</a></li>
+            <li><a href="#ai-identifier">AI Identifier</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#comments">Comments</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <div class="container">
-            <h1>Lotto Number Generator</h1>
-            <button id="generate">Generate Numbers</button>
-            <lotto-display></lotto-display>
-        </div>
+        <section id="lotto" class="content-section">
+            <div class="container">
+                <h2>Lotto Number Generator</h2>
+                <p>Feeling lucky? Our Lotto Number Generator is a simple tool to help you pick your numbers for the next big draw. It generates a set of random numbers with the click of a button. This is perfect for when you're not sure what numbers to choose and want to leave it up to fate. Good luck!</p>
+                <button id="generate">Generate Numbers</button>
+                <lotto-display></lotto-display>
+            </div>
+        </section>
 
-        <div class="form-container container">
-            <h2>Submit a Request</h2>
-            <form action="https://formspree.io/f/mgoylzwz" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send Request</button>
-            </form>
-        </div>
+        <section class="ad-section">
+            <div class="container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6791010009158789"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </section>
 
-        <div id="disqus_thread" class="container"></div>
+        <section id="ai-identifier" class="content-section">
+            <div class="container">
+                <h2>AI-Powered Cat or Dog Identifier</h2>
+                <p>Have a picture of a pet and can't tell if it's a cat or a dog? Our advanced AI, powered by Teachable Machine, can help! Upload an image below, and our model will analyze it to determine the probability of it being a cat or a dog. It's a fun demonstration of the power of machine learning.</p>
+                <input type="file" id="image-upload" accept="image/*">
+                <div id="image-preview-container"></div>
+                <div id="label-container"></div>
+            </div>
+        </section>
 
-        <div id="teachable-machine-container" class="container">
-            <h2>Dog or Cat Identifier</h2>
-            <p>Upload an image to see if it's a dog or a cat!</p>
-            <input type="file" id="image-upload" accept="image/*">
-            <div id="image-preview-container"></div>
-            <div id="label-container"></div>
-        </div>
-        
-        <div class="ads-container container">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-6791010009158789"
-                 data-ad-slot="YOUR_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>Submit a Request or Feedback</h2>
+                <p>Have a question, a suggestion for a new tool, or feedback on our existing ones? We'd love to hear from you. Please fill out the form below to get in touch with our team.</p>
+                <form action="https://formspree.io/f/mgoylzwz" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Request</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="comments" class="content-section">
+            <div class="container">
+                <h2>Community Discussion</h2>
+                <p>Join the conversation! Leave a comment below to share your thoughts, high scores from the lotto generator, or adorable pet pictures.</p>
+                <div id="disqus_thread"></div>
+            </div>
+        </section>
     </main>
 
+    <footer>
+        <p>&copy; 2026 Fantastic Parakeet. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="lotto-display.js" type="module"></script>
+    <script src="main.js"></script>
+
+    <!-- Disqus Script -->
     <script>
         var disqus_config = function () {
-        this.page.url = window.location.href;
-        this.page.identifier = window.location.pathname;
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
         };
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://fantastic-parakeet.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://fantastic-parakeet.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-    <script src="lotto-display.js" type="module"></script>
-    <script src="main.js"></script>
-
+    <!-- Teachable Machine Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
         const URL = "https://teachablemachine.withgoogle.com/models/0RBeUY6UG/";
-
         let model, labelContainer, maxPredictions;
 
-        // Load the image model
-        async function init() {
+        async function initTM() {
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
-
             model = await tmImage.load(modelURL, metadataURL);
             maxPredictions = model.getTotalClasses();
-
             labelContainer = document.getElementById("label-container");
             for (let i = 0; i < maxPredictions; i++) {
                 labelContainer.appendChild(document.createElement("div"));
             }
         }
 
-        // run the prediction
         async function predict(image) {
             const prediction = await model.predict(image);
             for (let i = 0; i < maxPredictions; i++) {
-                const classPrediction =
-                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
         }
         
-        // Setup the file upload
         const uploadInput = document.getElementById('image-upload');
         const previewContainer = document.getElementById('image-preview-container');
 
@@ -122,25 +155,20 @@
             if (event.target.files && event.target.files[0]) {
                 const reader = new FileReader();
                 reader.onload = (e) => {
-                    // Create an image element
                     const image = document.createElement('img');
                     image.src = e.target.result;
-                    image.width = 200; // Match the old webcam size
+                    image.width = 200;
                     image.height = 200;
-                    
-                    // Clear previous preview and show the new one
                     previewContainer.innerHTML = '';
                     previewContainer.appendChild(image);
-                    
-                    // Run prediction on the new image
                     image.onload = () => predict(image);
                 };
                 reader.readAsDataURL(event.target.files[0]);
             }
         });
 
-        // Initialize the model when the page loads
-        init();
+        initTM();
     </script>
+
 </body>
 </html>
