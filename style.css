@@ -200,6 +200,77 @@ body.light-mode .form-group textarea {
     transform: translateY(0);
 }
 
+/* Teachable Machine Container */
+#teachable-machine-container {
+    margin-top: 40px; /* Space between containers */
+    padding: 30px 40px;
+}
+
+#teachable-machine-container h2 {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--h1-color-dark);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease;
+}
+
+body.light-mode #teachable-machine-container h2 {
+    color: var(--h1-color-light);
+    text-shadow: none;
+}
+
+#teachable-machine-container button {
+    padding: 15px 30px;
+    font-size: 1.25em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 12px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #28a745, #218838); /* Greenish gradient for start button */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#teachable-machine-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+#teachable-machine-container button:active {
+    transform: translateY(0);
+}
+
+#webcam-container {
+    margin: 20px auto;
+    border: 2px solid var(--card-border-dark);
+    border-radius: 10px;
+    overflow: hidden; /* Ensures the canvas corners are also rounded */
+    transition: border-color 0.3s ease;
+}
+
+body.light-mode #webcam-container {
+    border: 2px solid var(--card-border-light);
+}
+
+#label-container {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--text-color-dark);
+    transition: color 0.3s ease;
+}
+
+body.light-mode #label-container {
+    color: var(--text-color-light);
+}
+
+#label-container div {
+    padding: 5px 0;
+}
+
 
 /* Generate Button - Modern & Interactive */
 #generate {
